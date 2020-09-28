@@ -11,11 +11,11 @@ transactionRouter.get('/', (request, response) => {
   try {
     // TODO
 
-    const transaction = transactionsRepository.all();
+    const transactions = transactionsRepository.all();
     const balance = transactionsRepository.getBalance();
 
     return response.json({
-      transaction,
+      transactions,
       balance,
     });
   } catch (err) {
